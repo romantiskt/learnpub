@@ -1,0 +1,10 @@
+include ':app'
+rootProject.name = "one_day_android"
+
+setBinding(new Binding([gradle: this]))
+evaluate(new File(
+        settingsDir.parentFile,
+        'one_day_flutter/.android/include_flutter.groovy'
+))
+include ':one_day_flutter'
+project(':one_day_flutter').projectDir = new File('../one_day_flutter')

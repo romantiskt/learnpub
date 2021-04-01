@@ -1,0 +1,28 @@
+PODS:
+  - Flutter (1.0.0)
+  - FlutterPluginRegistrant (0.0.1):
+    - Flutter
+  - one_day_flutter (0.0.1):
+    - Flutter
+
+DEPENDENCIES:
+  - Flutter (from `../one_day_flutter/.ios/Flutter/engine`)
+  - FlutterPluginRegistrant (from `../one_day_flutter/.ios/Flutter/FlutterPluginRegistrant`)
+  - one_day_flutter (from `../one_day_flutter/.ios/Flutter`)
+
+EXTERNAL SOURCES:
+  Flutter:
+    :path: "../one_day_flutter/.ios/Flutter/engine"
+  FlutterPluginRegistrant:
+    :path: "../one_day_flutter/.ios/Flutter/FlutterPluginRegistrant"
+  one_day_flutter:
+    :path: "../one_day_flutter/.ios/Flutter"
+
+SPEC CHECKSUMS:
+  Flutter: 0e3d915762c693b495b44d77113d4970485de6ec
+  FlutterPluginRegistrant: d59dd07dd90e9c6430996073575a5bd1ea19677e
+  one_day_flutter: f20a8ca6abd0e04ae3ec8bbf5ed1d2b18d212841
+
+PODFILE CHECKSUM: fceff1926cade22857f532580a7c45c36b1563d0
+
+COCOAPODS: 1.9.3
