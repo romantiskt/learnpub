@@ -2,6 +2,7 @@ import 'dart:developer';
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:one_day_flutter/core/color.dart';
 
 typedef TabCallBack =void Function(int index);
 
@@ -25,16 +26,16 @@ class _Item {
 
 class MainTabState extends State<MainTabView> {
   final itemNames = [
-    _Item('明细', 'assets/image/bottom_detail_pressed.png',
-        'assets/image/bottom_detail_normal.png', 0),
-    _Item('图表', 'assets/image/bottom_chart_pressed.png',
-        'assets/image/bottom_chart_normal.png', 1),
-    _Item('记账', 'assets/image/bottom_add_pressed.png',
-        'assets/image/bottom_add_normal.png', 2),
-    _Item('社区', 'assets/image/bottom_sns_pressed.png',
-        'assets/image/bottom_sns_normal.png', 3),
-    _Item('我的', 'assets/image/bottom_me_pressed.png',
-        'assets/image/bottom_me_normal.png', 4),
+    _Item('明细', 'assets/image/home/bottom_detail_pressed.png',
+        'assets/image/home/bottom_detail_normal.png', 0),
+    _Item('图表', 'assets/image/home/bottom_chart_pressed.png',
+        'assets/image/home/bottom_chart_normal.png', 1),
+    _Item('记账', 'assets/image/home/bottom_add_pressed.png',
+        'assets/image/home/bottom_add_normal.png', 2),
+    _Item('社区', 'assets/image/home/bottom_sns_pressed.png',
+        'assets/image/home/bottom_sns_normal.png', 3),
+    _Item('我的', 'assets/image/home/bottom_me_pressed.png',
+        'assets/image/home/bottom_me_normal.png', 4),
   ];
   double screenWidth;
   int selectIndex=0;
@@ -113,7 +114,7 @@ class MainTabState extends State<MainTabView> {
                 itemNames[e].name,
                 style: TextStyle(
                     fontSize: 11,
-                    color: selectIndex == e ? Colors.yellow : Colors.black),
+                    color: selectIndex == e ? AppColor.themeColor : Colors.black),
               )
             ],
           ),

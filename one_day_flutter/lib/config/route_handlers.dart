@@ -15,5 +15,5 @@ var rootHandler = Handler(
 var addHandler = Handler(
     handlerFunc: (BuildContext
     context, Map<String, List<String>> params) {
-      return AddPage();
+      return ChargePage();
     });

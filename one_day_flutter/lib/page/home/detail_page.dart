@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:one_day_flutter/core/color.dart';
 
 import '../../main.dart';
 
@@ -22,7 +23,7 @@ class DetailPage extends StatelessWidget {
               style: TextStyle(color: Color(0xFF000000)),
             ),
           ),
-          backgroundColor: white,
+          backgroundColor: AppColor.white,
           automaticallyImplyLeading: false),
     );
   }
