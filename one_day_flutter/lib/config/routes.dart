@@ -6,6 +6,7 @@ import './route_handlers.dart';
 class Routes {
   static String root = "/";
   static String add = "/add";
+  static String typeSetting = "/add/setting";
 
   static void configureRoutes(FluroRouter router) {
     router.notFoundHandler = Handler(
@@ -15,5 +16,6 @@ class Routes {
     });
     router.define(root, handler: rootHandler);
     router.define(add, handler: addHandler);
+    router.define(typeSetting, handler: typeSettingHandler);
   }
 }

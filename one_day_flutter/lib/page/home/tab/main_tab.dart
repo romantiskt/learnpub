@@ -114,7 +114,7 @@ class MainTabState extends State<MainTabView> {
                 itemNames[e].name,
                 style: TextStyle(
                     fontSize: 11,
-                    color: selectIndex == e ? AppColor.themeColor : Colors.black),
+                    color:  Colors.black),
               )
             ],
           ),

@@ -2,6 +2,7 @@ import 'package:fluro/fluro.dart';
 import 'package:flutter/material.dart';
 import 'package:one_day_flutter/config/application.dart';
 import 'package:one_day_flutter/config/routes.dart';
+import 'package:one_day_flutter/core/device.dart';
 
 class AppMainPage extends StatefulWidget {
   @override

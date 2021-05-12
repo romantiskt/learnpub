@@ -3,6 +3,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:one_day_flutter/config/application.dart';
 import 'package:one_day_flutter/config/routes.dart';
+import 'package:one_day_flutter/core/device.dart';
 import 'package:one_day_flutter/page/home/chart_page.dart';
 import 'package:one_day_flutter/page/home/me_page.dart';
 import 'package:one_day_flutter/page/home/sns_page.dart';
@@ -26,6 +27,8 @@ class _MainTabPageState extends State<MainTabPage> {
   int _selectIndex = 0;
   @override
   Widget build(BuildContext context) {
+    Application.context = context;
+    Device.init();
     return Scaffold(body: Container(
         color: Color.fromARGB(255, 248, 248, 248),
         child: Stack(
