@@ -1,24 +1,23 @@
 import 'package:flutter/material.dart';
 import 'package:one_day_flutter/core/color.dart';
+import 'package:one_day_flutter/page/home/add/type/type_setting_page.dart';
 
 import '../expense_data.dart';
 
 class TypeAddPage extends StatefulWidget {
-  int type;
 
-  TypeAddPage(this.type);
+  TypeAddPage();
 
   @override
   State<StatefulWidget> createState() {
-    return TypeAddState(type);
+    return TypeAddState();
   }
 }
 
 class TypeAddState extends State<TypeAddPage> {
-  int type;
   ExpenseModel model = new ExpenseModel();
 
-  TypeAddState(this.type);
+  TypeAddState();
 
   @override
   Widget build(BuildContext context) {
@@ -28,7 +27,7 @@ class TypeAddState extends State<TypeAddPage> {
   }
 
   List<Widget> getContentWidget() {
-    if(type==0){
+    if(ShareDataWidget.of(context).data==0){
       return model.expenseList.asMap().keys.map((e) => getItemView(e)).toList();
     }else{
       return model.incomeList.asMap().keys.map((e) => getItemView(e)).toList();
@@ -37,7 +36,7 @@ class TypeAddState extends State<TypeAddPage> {
   }
 
   Widget getItemView(int e) {
-    var entity = model.expenseList[e];
+    var entity = ShareDataWidget.of(context).data==0?model.expenseList[e]:model.incomeList[e];
     return Column(
       children: [
         Container(
