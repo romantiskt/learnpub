@@ -6,5 +6,5 @@ evaluate(new File(
         settingsDir.parentFile,
         'one_day_flutter/.android/include_flutter.groovy'
 ))
-include ':one_day_flutter'
-project(':one_day_flutter').projectDir = new File('../one_day_flutter')
+//include ':one_day_flutter'
+//project(':one_day_flutter').projectDir = new File('../one_day_flutter')

@@ -170,7 +170,7 @@
 			buildConfigurationList = D30555A12615B4E800E99D4A /* Build configuration list for PBXNativeTarget "one_day_ios" */;
 			buildPhases = (
 				8CA8E74136F483417695D7EA /* [CP] Check Pods Manifest.lock */,
-				6AA0F0623FD2827F2A60F58D /* [CP-User] Run Flutter Build Script */,
+				9D93D4716384A672B882CC2C /* [CP-User] Run Flutter Build one_day_flutter Script */,
 				D305556E2615B4E500E99D4A /* Sources */,
 				D305556F2615B4E500E99D4A /* Frameworks */,
 				D30555702615B4E500E99D4A /* Resources */,
@@ -290,22 +290,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		6AA0F0623FD2827F2A60F58D /* [CP-User] Run Flutter Build Script */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${SRCROOT}/../one_day_flutter/.metadata",
-				"${SRCROOT}/../one_day_flutter/.ios/Flutter/App.framework/App",
-				"${SRCROOT}/../one_day_flutter/.ios/Flutter/engine/Flutter.framework/Flutter",
-				"${SRCROOT}/../one_day_flutter/.ios/Flutter/flutter_export_environment.sh",
-			);
-			name = "[CP-User] Run Flutter Build Script";
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "set -e\nset -u\nsource \"${SRCROOT}/../one_day_flutter/.ios/Flutter/flutter_export_environment.sh\"\n\"$FLUTTER_ROOT\"/packages/flutter_tools/bin/xcode_backend.sh build";
-		};
 		8CA8E74136F483417695D7EA /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -327,6 +311,16 @@
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
+		};
+		9D93D4716384A672B882CC2C /* [CP-User] Run Flutter Build one_day_flutter Script */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			name = "[CP-User] Run Flutter Build one_day_flutter Script";
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -e\nset -u\nsource \"${SRCROOT}/../one_day_flutter/.ios/Flutter/flutter_export_environment.sh\"\nexport VERBOSE_SCRIPT_LOGGING=1 && \"$FLUTTER_ROOT\"/packages/flutter_tools/bin/xcode_backend.sh build";
 		};
 		FC6230CE0C2EBDBB42C3180C /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
