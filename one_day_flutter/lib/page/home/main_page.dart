@@ -3,6 +3,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:one_day_flutter/config/application.dart';
 import 'package:one_day_flutter/config/routes.dart';
+import 'package:one_day_flutter/core/channel/log_channel.dart';
 import 'package:one_day_flutter/core/device.dart';
 import 'package:one_day_flutter/page/home/chart_page.dart';
 import 'package:one_day_flutter/page/home/me_page.dart';
@@ -47,7 +48,7 @@ class _MainTabPageState extends State<MainTabPage> {
   }
 
   void tabClick(int index){
-    print("点击tab了。。。$index");
+    LogUtils.d("wang","点击tab了。。。$index");
     if(index==2){
       Application.router.navigateTo(context, Routes.add, transition: TransitionType.inFromBottom);
     }else{
