@@ -6,6 +6,7 @@ load File.join(flutter_application_path, '.ios', 'Flutter', 'podhelper.rb')
 
 target 'one_day_ios' do
   
+  pod 'YTKNetwork'
   install_all_flutter_pods(flutter_application_path)
 
   

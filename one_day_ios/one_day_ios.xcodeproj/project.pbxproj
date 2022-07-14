@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2F111C4F2850F7AE00501881 /* RegisterApi.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F111C4E2850F7AE00501881 /* RegisterApi.m */; };
 		BAA4A56BAAB46753113A925A /* libPods-one_day_ios.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E227F891735608BC4EA2271 /* libPods-one_day_ios.a */; };
 		D30555772615B4E500E99D4A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D30555762615B4E500E99D4A /* AppDelegate.m */; };
 		D305557A2615B4E500E99D4A /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D30555792615B4E500E99D4A /* SceneDelegate.m */; };
@@ -39,6 +40,8 @@
 /* Begin PBXFileReference section */
 		22EEF671EA2CA4B3903F63D0 /* Pods-one_day_ios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-one_day_ios.debug.xcconfig"; path = "Target Support Files/Pods-one_day_ios/Pods-one_day_ios.debug.xcconfig"; sourceTree = "<group>"; };
 		2E227F891735608BC4EA2271 /* libPods-one_day_ios.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-one_day_ios.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2F111C4D2850F7AD00501881 /* RegisterApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RegisterApi.h; path = ../../../../github/FlutterWar/Imitate/Imitate/Src/Core/RegisterApi.h; sourceTree = "<group>"; };
+		2F111C4E2850F7AE00501881 /* RegisterApi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RegisterApi.m; path = ../../../../github/FlutterWar/Imitate/Imitate/Src/Core/RegisterApi.m; sourceTree = "<group>"; };
 		D30555722615B4E500E99D4A /* one_day_ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = one_day_ios.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D30555752615B4E500E99D4A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		D30555762615B4E500E99D4A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -92,8 +95,16 @@
 				22EEF671EA2CA4B3903F63D0 /* Pods-one_day_ios.debug.xcconfig */,
 				D401025E863CC6BCBC0639F8 /* Pods-one_day_ios.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		2F111C4C2850F78E00501881 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				2F111C4D2850F7AD00501881 /* RegisterApi.h */,
+				2F111C4E2850F7AE00501881 /* RegisterApi.m */,
+			);
+			path = Core;
 			sourceTree = "<group>";
 		};
 		4679B75E18CC4108C3D82F53 /* Frameworks */ = {
@@ -129,6 +140,7 @@
 		D30555742615B4E500E99D4A /* one_day_ios */ = {
 			isa = PBXGroup;
 			children = (
+				2F111C4C2850F78E00501881 /* Core */,
 				D30555752615B4E500E99D4A /* AppDelegate.h */,
 				D30555762615B4E500E99D4A /* AppDelegate.m */,
 				D30555782615B4E500E99D4A /* SceneDelegate.h */,
@@ -347,6 +359,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D305557D2615B4E500E99D4A /* ViewController.m in Sources */,
+				2F111C4F2850F7AE00501881 /* RegisterApi.m in Sources */,
 				D30555772615B4E500E99D4A /* AppDelegate.m in Sources */,
 				D30555882615B4E800E99D4A /* main.m in Sources */,
 				D305557A2615B4E500E99D4A /* SceneDelegate.m in Sources */,

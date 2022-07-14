@@ -32,6 +32,7 @@ class NetMethodChannel(flutterEngine: FlutterEngine) : MethodChannel.MethodCallH
                             val response = try {
                                 RequestEngine.get(url)
                             } catch (e: Exception) {
+                                e
                             }
                             if(response is Response){
                                 val body = response.body()

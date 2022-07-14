@@ -6,6 +6,7 @@
 //
 #import <FlutterPluginRegistrant/GeneratedPluginRegistrant.h>
 #import "AppDelegate.h"
+#import "RegisterApi.h"
 
 @interface AppDelegate ()
 
@@ -18,9 +19,39 @@
     // Override point for customization after application launch.
     self.flutterEngine = [[FlutterEngine alloc] initWithName:@"my flutter engine"];
       // Runs the default Dart entrypoint with a default Flutter route.
-      [self.flutterEngine run];
+    [self.flutterEngine run];
       // Used to connect plugins (only if you have plugins with iOS platform code).
-      [GeneratedPluginRegistrant registerWithRegistry:self.flutterEngine];
+    FlutterMethodChannel* netWorkChannel=[FlutterMethodChannel methodChannelWithName:@"native_network" binaryMessenger:self.flutterEngine.binaryMessenger];
+    [netWorkChannel setMethodCallHandler:^(FlutterMethodCall* call, FlutterResult result) {
+        if ([@"get" isEqualToString:call.method]) {
+                    NSDictionary *args = call.arguments;
+                    RegisterApi *api = [[RegisterApi alloc] initWithUrl:args[@"url"] ];
+                           [api startWithCompletionBlockWithSuccess:^(YTKBaseRequest *request) {
+                               NSLog(@"succeed");
+                               result(request.responseString);
+                           } failure:^(YTKBaseRequest *request) {
+                               // 你可以直接在这里使用 self
+                               NSLog(@"failed");
+                               result([FlutterError errorWithCode:@"UNAVAILABLE"
+                                                               message:@"请求错误"
+                                                               details:nil]);
+                           }];
+                }
+       }];
+       
+       FlutterMethodChannel* logChannel=[FlutterMethodChannel methodChannelWithName:@"native_log" binaryMessenger:self.flutterEngine.binaryMessenger];
+       [logChannel setMethodCallHandler:^(FlutterMethodCall *  call, FlutterResult   result) {
+           NSDictionary *args = call.arguments;
+           NSString* tag=args[@"tag"];
+           NSString* msg=args[@"msg"];
+           if ([@"logD" isEqualToString:call.method]) {
+               NSLog(@"debug tag:%@  msg:%@",tag,msg);
+           }else{
+                NSLog(@"normal tag:%@  msg:%@",tag,msg);
+           }
+       }];
+    
+    [GeneratedPluginRegistrant registerWithRegistry:self.flutterEngine];
       return YES;
 }
 

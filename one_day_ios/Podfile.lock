@@ -1,14 +1,29 @@
 PODS:
+  - AFNetworking/NSURLSession (4.0.1):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (4.0.1)
+  - AFNetworking/Security (4.0.1)
+  - AFNetworking/Serialization (4.0.1)
   - Flutter (1.0.0)
   - FlutterPluginRegistrant (0.0.1):
     - Flutter
   - one_day_flutter (0.0.1):
     - Flutter
+  - YTKNetwork (3.0.6):
+    - AFNetworking/NSURLSession (~> 4.0)
 
 DEPENDENCIES:
   - Flutter (from `../one_day_flutter/.ios/Flutter/engine`)
   - FlutterPluginRegistrant (from `../one_day_flutter/.ios/Flutter/FlutterPluginRegistrant`)
   - one_day_flutter (from `../one_day_flutter/.ios/Flutter`)
+  - YTKNetwork
+
+SPEC REPOS:
+  trunk:
+    - AFNetworking
+    - YTKNetwork
 
 EXTERNAL SOURCES:
   Flutter:
@@ -19,10 +34,12 @@ EXTERNAL SOURCES:
     :path: "../one_day_flutter/.ios/Flutter"
 
 SPEC CHECKSUMS:
+  AFNetworking: 7864c38297c79aaca1500c33288e429c3451fdce
   Flutter: bdfa2e8fe0e2880a2c6a58a0b1a8675c262a07af
   FlutterPluginRegistrant: d3a0fbc12bc47787a12fcc919193f3959aa7d5ad
   one_day_flutter: 1ce11e8babaaea2a403fd0133ec82a298296b212
+  YTKNetwork: c16be90b06be003de9e9cd0d3b187cc8eaf35c04
 
-PODFILE CHECKSUM: e2092c14c2f7f9dee9453643b0739e52e8b566aa
+PODFILE CHECKSUM: b4c9e874665910c1e4289e8f7933bfb61c187e5c
 
 COCOAPODS: 1.11.2

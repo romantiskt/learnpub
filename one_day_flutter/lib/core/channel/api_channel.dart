@@ -1,6 +1,7 @@
 import 'dart:convert';
 
 import 'package:flutter/services.dart';
+import 'package:one_day_flutter/core/channel/log_channel.dart';
 
 typedef void Success(Object data);
 typedef void Failed(String code, String errorMsg);
@@ -32,18 +33,22 @@ class Api {
         params = Map<String, String>();
       }
       params["url"] = baseUrl + url;
+      LogUtils.d("wang", "url->" + url);
       String response = await network.invokeMethod("get", params);
+      LogUtils.d("wang", "response->" + response);
       if (response != null && response.isNotEmpty) {
         var decodeStr = json.decode(response);
         if (decodeStr['code'] == '0') {
-          success( decodeStr["data"]);
+          success(decodeStr["data"]);
         } else {
-          failed(decodeStr['code'], decodeStr['msg']==null?"网络开小差了,请稍后再试":decodeStr['msg']);
+          failed(decodeStr['code'],
+              decodeStr['msg'] == null ? "网络开小差了,请稍后再试" : decodeStr['msg']);
         }
       } else {
         failed("-2", "response is null");
       }
-    } on PlatformException catch (e) {
+    } catch (e) {
+      LogUtils.d("wang", "response error->" + e.message);
       failed("-1", e.message);
     }
   }
